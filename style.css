@@ -1,53 +1,188 @@
+/* === GLOBAL === */
 body {
-  background-color: #f9f9f9;
+  background: radial-gradient(circle at top left, #080818, #0b0b25, #000);
   font-family: 'Poppins', sans-serif;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
+/* === ANIMATED BACKGROUND === */
+.background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.line {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgba(0,255,255,0.5), transparent);
+  animation: moveLine 6s linear infinite;
+  opacity: 0.5;
+}
+
+.line:nth-child(1) { left: 20%; animation-delay: 0s; }
+.line:nth-child(2) { left: 50%; animation-delay: 2s; }
+.line:nth-child(3) { left: 80%; animation-delay: 4s; }
+
+@keyframes moveLine {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* === HEADER === */
 header {
-  background-color: #0d6efd;
-  color: white;
-  padding: 15px;
   text-align: center;
-  font-size: 1.8rem;
-  font-weight: bold;
+  padding: 60px 10px 40px;
+  background: linear-gradient(135deg, rgba(0,255,255,0.1), rgba(255,0,255,0.1));
+  border-bottom: 2px solid rgba(0,255,255,0.3);
+  box-shadow: 0 0 20px rgba(0,255,255,0.1);
 }
 
-/* Add spacing below navbar */
-.navbar {
-  margin-bottom: 20px;
+header h1 {
+  color: #00eaff;
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-shadow: 0 0 20px #00eaff;
 }
 
+header p {
+  color: #f0f0f0;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* === NAVBAR === */
+.custom-navbar {
+  background: rgba(20, 20, 40, 0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,255,255,0.3);
+  box-shadow: 0 2px 20px rgba(0,255,255,0.15);
+}
+
+.navbar-brand {
+  color: #00eaff !important;
+  text-shadow: 0 0 10px #00eaff;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  color: #d0d0d0 !important;
+  margin: 0 12px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(90deg, #00eaff, #ff00ff);
+  transition: 0.3s;
+  margin-top: 3px;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00eaff !important;
+}
+
+/* === MAIN CONTENT === */
 .main-content {
+  background: linear-gradient(145deg, #111191, #1d1d56);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0,255,255,0.2);
+  padding: 50px 20px;
   text-align: center;
-  padding: 20px;
-  background-image: url('../techfest/assets/poke.jpg');
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  min-height: 300px;
 }
 
+.main-content h2 {
+  color: #00eaff;
+  text-shadow: 0 0 15px #00eaff;
+  font-size: 1.8rem;
+}
+
+.main-content p {
+  color: #cfcfcf;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* === BUTTONS (OUTSIDE MAIN CONTENT) === */
+.button-container {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.glowing-button {
+  padding: 14px 30px;
+  background: transparent;
+  color: #00eeff;
+  border: 2px solid #00eeff;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 10px;
+  box-shadow: 0 0 10px #00eeff, inset 0 0 10px #00eeff;
+  transition: all 0.4s ease-in-out;
+}
+
+.glowing-button:hover {
+  background: linear-gradient(90deg, #00eeff, #ff00ff);
+  color: #000;
+  box-shadow: 0 0 30px #00eeff, 0 0 60px #ff00ff;
+  transform: translateY(-3px);
+}
+
+/* === INFO SECTION === */
 .info-section {
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin: 60px 0;
 }
 
 .info-card {
-  padding: 20px;
+  background: linear-gradient(145deg, #1b1b3f, #25256b);
+  border: 1px solid rgba(0,255,255,0.25);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,255,255,0.15);
+  padding: 25px;
+  transition: 0.3s;
   text-align: center;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
 }
 
 .info-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px rgba(0,255,255,0.4);
 }
 
+.info-card h5 {
+  color: #00eaff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px #00eaff;
+}
+
+/* === FOOTER === */
 footer {
-  background-color: #0d6efd;
-  color: white;
+  background: linear-gradient(90deg, #0b0b2a, #131341);
+  color: #00eaff;
   text-align: center;
-  padding: 10px 0;
-  margin-top: 30px;
-  font-size: 0.9rem;
+  padding: 20px 0;
+  margin-top: 50px;
+  border-top: 1px solid rgba(0,255,255,0.3);
 }
