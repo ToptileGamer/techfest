@@ -20,7 +20,7 @@ header {
 .main-content {
   text-align: center;
   padding: 20px;
-  background: white;
+  background-image: url('../techfest/assets/poke.jpg');
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   min-height: 300px;
