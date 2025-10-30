@@ -79,15 +79,35 @@ body {
 }
 
 /* ===============================
-   HERO SECTION
+   HERO SECTION (Bright + Fit Image)
    =============================== */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
-  background: linear-gradient(135deg, rgba(0, 10, 25, 0.8), rgba(0, 0, 0, 0.9));
+  min-height: 100vh;
+  position: relative;
   overflow: hidden;
+
+  /* ✨ Brighter Background with Full Fit */
+  background: 
+    linear-gradient(135deg, rgba(0, 20, 50, 0.35), rgba(0, 10, 25, 0.45)),
+    url('assets/spardha.jpg') center center no-repeat;
+
+  background-size: contain;   /* Fit entire image */
+  background-color: #000;     /* Fill gaps if aspect ratio differs */
+
+  /* Brighten image */
+  filter: brightness(1.25) contrast(1.1);
+}
+
+/* Optional: overlay for text readability */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.5));
+  z-index: 1;
 }
 
 .hero-inner {
@@ -97,6 +117,8 @@ body {
   gap: 2rem;
   padding: 3rem 2rem;
   flex-wrap: wrap;
+  z-index: 2;
+  text-align: center;
 }
 
 .hero-text {
