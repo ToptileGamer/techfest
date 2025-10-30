@@ -1,6 +1,6 @@
 // Handle registration button click
 document.getElementById("registerBtn").addEventListener("click", function() {
-  // alert("Redirecting to Registration Page...");
+  alert("Redirecting to Registration Page...");
   window.open("https://example.com/registration", "_blank");
 });
 
