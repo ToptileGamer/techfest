@@ -74,8 +74,8 @@ body {
 }
 
 .site-nav a:hover {
-  color: #00ffff;
-  text-shadow: 0 0 8px #00ffff;
+  color: #18e605;
+  text-shadow: 0 0 10px #00ffff;
 }
 
 /* ===============================
@@ -92,7 +92,7 @@ body {
   /* ✨ Brighter Background with Full Fit */
   background: 
     linear-gradient(135deg, rgba(0, 20, 50, 0.35), rgba(0, 10, 25, 0.45)),
-    url('assets/spardha.jpg') center center no-repeat;
+    url('../techfest/assets/spardha.jpe') center center no-repeat;
 
   background-size: contain;   /* Fit entire image */
   background-color: #000;     /* Fill gaps if aspect ratio differs */
@@ -143,7 +143,7 @@ body {
 }
 
 .hero-image img {
-  max-width: 450px;
+  max-width: 1920*1080px;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
   animation: float 4s ease-in-out infinite;
@@ -344,7 +344,7 @@ body {
   }
 
   .hero-image img {
-    max-width: 300px;
+    max-width: 800px;
   }
 
   #nav-toggle {
