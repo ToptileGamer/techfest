@@ -110,9 +110,25 @@ body {
 
 .event-img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  height: 250px;              /* uniform fixed height */
+  object-fit: cover;          /* ensures image is cropped, not distorted */
+  object-position: center;    /* centers image focus */
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
 }
+
+/* Adjust slightly for smaller screens */
+@media (max-width: 992px) {
+  .event-img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .event-img {
+    height: 200px;
+  }
+}
+
 
 .event-body {
   padding: 1.2rem;
