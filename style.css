@@ -1,19 +1,15 @@
-/* ===============================
-   NEXUS - TECH THEME STYLESHEET
-   =============================== */
+/* =====================================
+   NEXUS - FINAL STYLESHEET
+   ===================================== */
 
-/* Google Font */
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
 
-/* Reset & Base */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -23,9 +19,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ===============================
-   HEADER
-   =============================== */
+/* HEADER */
 .site-header {
   background: rgba(10, 10, 15, 0.9);
   border-bottom: 1px solid rgba(0, 255, 255, 0.2);
@@ -48,21 +42,11 @@ body {
   color: #00ffff;
   text-shadow: 0 0 10px #00ffff;
   text-decoration: none;
-  letter-spacing: 2px;
   transition: transform 0.3s ease;
 }
 
 .brand:hover {
   transform: scale(1.1);
-}
-
-#nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #00ffff;
-  cursor: pointer;
 }
 
 .site-nav a {
@@ -74,121 +58,34 @@ body {
 }
 
 .site-nav a:hover {
-  color: #18e605;
-  text-shadow: 0 0 10px #00ffff;
+  color: #00ffcc;
+  text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffcc;
 }
 
-/* ===============================
-   HERO SECTION (Bright + Fit Image)
-   =============================== */
+/* HERO */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  position: relative;
+  min-height: 60vh;
   overflow: hidden;
-
-  /* ✨ Brighter Background with Full Fit */
-  background: 
-    linear-gradient(135deg, rgba(0, 20, 50, 0.35), rgba(0, 10, 25, 0.45)),
-    url('../techfest/assets/spardha.jpe') center center no-repeat;
-
-  background-size: contain;   /* Fit entire image */
-  background-color: #000;     /* Fill gaps if aspect ratio differs */
-
-  /* Brighten image */
-  filter: brightness(1.25) contrast(1.1);
 }
 
-/* Optional: overlay for text readability */
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.5));
-  z-index: 1;
-}
-
-.hero-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 3rem 2rem;
-  flex-wrap: wrap;
-  z-index: 2;
-  text-align: center;
-}
-
-.hero-text {
-  flex: 1;
-  max-width: 600px;
-  animation: fadeInUp 1.5s ease forwards;
-}
-
-.hero h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.8rem;
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  color: #b0b0b0;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-}
-
-.hero-image img {
-  max-width: 1920*1080px;
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
-  animation: float 4s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
 }
 
-/* Hero Buttons */
-.btn {
-  padding: 0.8rem 1.6rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.btn.primary {
-  background: #00ffff;
-  color: #000;
-  box-shadow: 0 0 12px #00ffff;
-}
-
-.btn.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 25px #00ffff;
-}
-
-.btn.outline {
-  border: 2px solid #00ffff;
-  color: #00ffff;
-}
-
-.btn.outline:hover {
-  background: #00ffff;
-  color: #000;
-  box-shadow: 0 0 15px #00ffff;
-}
-
-/* ===============================
-   ABOUT
-   =============================== */
+/* SECTIONS */
 .section {
   padding: 4rem 2rem;
 }
 
-.about h2, .events h2 {
+.about h2,
+.events h2 {
   font-family: 'Orbitron', sans-serif;
   text-align: center;
   color: #00ffff;
@@ -196,70 +93,50 @@ body {
   margin-bottom: 2rem;
 }
 
-.about p {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 1.6;
-  color: #ccc;
-  animation: fadeIn 1.2s ease;
-}
-
-/* ===============================
-   EVENTS SECTION
-   =============================== */
-.events-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
+/* EVENTS */
 .event {
-  background: rgba(0, 10, 25, 0.7);
+  background: rgba(0, 10, 25, 0.8);
   border: 1px solid rgba(0, 255, 255, 0.3);
   border-radius: 15px;
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  animation: fadeInUp 1s ease forwards;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.3s ease;
 }
 
 .event:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 35px rgba(0, 255, 255, 1), 0 0 60px rgba(0, 255, 255, 0.7);
+  filter: brightness(1.3);
 }
 
-.event img {
+.event-img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
 }
 
 .event-body {
   padding: 1.2rem;
+  text-align: center;
 }
 
 .event-body h3 {
   color: #00ffff;
-  margin-bottom: 0.5rem;
   font-family: 'Orbitron', sans-serif;
+  margin-bottom: 0.6rem;
 }
 
 .event-body p {
   color: #b0b0b0;
   font-size: 0.95rem;
-  line-height: 1.5;
 }
 
 .event-body .meta {
-  margin-top: 0.8rem;
-  font-size: 0.85rem;
   color: #aaa;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
 }
 
-/* ===============================
-   CONTACT / FOOTER
-   =============================== */
+/* CONTACT */
 .contact-info {
   background: rgba(0, 10, 25, 0.7);
   border: 1px solid rgba(0, 255, 255, 0.3);
@@ -268,7 +145,7 @@ body {
   max-width: 500px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
 }
 
 .contact-info h3 {
@@ -283,10 +160,10 @@ body {
 }
 
 .contact-info a:hover {
-  text-shadow: 0 0 10px #00ffff;
+  text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffcc;
 }
 
-/* Footer */
+/* FOOTER */
 .site-footer {
   background: rgba(0, 0, 0, 0.9);
   border-top: 1px solid rgba(0, 255, 255, 0.2);
@@ -303,70 +180,13 @@ body {
 }
 
 .foot-links a:hover {
-  text-shadow: 0 0 10px #00ffff;
+  text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffcc;
+  color: #00ffcc;
 }
 
-/* ===============================
-   ANIMATIONS
-   =============================== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-/* ===============================
-   RESPONSIVE
-   =============================== */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .hero-inner {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-image img {
-    max-width: 800px;
-  }
-
-  #nav-toggle {
-    display: block;
-  }
-
-  .site-nav {
-    display: none;
-    flex-direction: column;
-    background: rgba(0, 10, 25, 0.95);
-    position: absolute;
-    top: 70px;
-    right: 0;
-    padding: 1rem;
-    border-left: 1px solid rgba(0, 255, 255, 0.3);
-  }
-
-  .site-nav a {
-    margin: 0.5rem 0;
-  }
-
-  .site-nav.active {
-    display: flex;
+  .event-img {
+    height: 180px;
   }
 }

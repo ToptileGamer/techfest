@@ -3,48 +3,46 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nexus</title>
+  <title>Spardha 3.0</title>
+  <meta name="description" content="Spardha 3.0 — City Engineering College Annual Fest" />
+
+  <!-- ✅ Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ✅ Custom CSS -->
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Educational replica of a college event site (template). Replace placeholder content with your own." />
 </head>
 <body>
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">Spardha 3.0 </a>
+      <a class="brand" href="index.html">Spardha 3.0</a>
       <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
       <nav id="site-nav" class="site-nav">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#events">Events</a>
-
       </nav>
     </div>
   </header>
 
   <main>
     <!-- HERO -->
-    <section id="home" class="hero">
+    <section id="home" class="hero text-center text-light">
       <div class="container hero-inner">
-        <div class="hero-text">
-          <!-- <h1>Nexus — Annual Tech & Culture Fest</h1>
-          <p class="lead">A weekend of workshops, competitions and performances. Organized by students for students.</p>
-          <div class="hero-cta">
-            <a href="#events" class="btn primary">Explore Events</a>
-            <a href="#contact" class="btn outline">Get Involved</a> -->
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="spardha.jpeg" alt="Hero image - festival" />
+        <div class="hero-image w-100">
+          <img src="spardha.jpeg" alt="Spardha Festival" class="img-fluid rounded-4 shadow-lg">
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section about">
+    <section id="about" class="section about text-center">
       <div class="container">
         <h2>About Spardha 3.0</h2>
-        <p>Nexus is a campus festival celebrating technology, creativity and culture. </p>
-        
+        <p>
+          SPARDA 3.0, hosted by City Engineering College, is a vibrant multi-disciplinary college event featuring both technical and non-technical competitions, designed to showcase student talent, creativity, and teamwork across various domains. SPARDA encourages participation from all colleges, fostering national and regional collaboration.
+        </p>
       </div>
     </section>
 
@@ -52,100 +50,114 @@
     <section id="events" class="section events">
       <div class="container">
         <h2>Featured Events</h2>
-        <div class="events-grid">
-          <a href="tech-talk.html" class="event-link">
-  <article class="event">
-    <img src="techtalk.jpeg" alt="Event 1" />
-    <div class="event-body">
-      <h3>Tech-Talk</h3>
-      <p>48-hour coding challenge. Team up and build something awesome.</p>
-      <div class="meta">Date: Nov 21 — Nov 23</div>
-    </div>
-  </article>
-</a>
 
-<a href="tech-talk.html" class="event-link">
-  <article class="event">
-    <img src="cirbug.jpeg" alt="Event 1" />
-    <div class="event-body">
-      <h3>Circuit Debugging</h3>
-      <p>48-hour coding challenge. Team up and build something awesome.</p>
-      <div class="meta">Date: Nov 21 — Nov 23</div>
-    </div>
-  </article>
-</a>
-<a href="tech-talk.html" class="event-link">
-  <article class="event">
-    <img src="meme2.jpeg" alt="Event 1" />
-    <div class="event-body">
-      <h3>Meme-Creation</h3>
-      <p>48-hour coding challenge. Team up and build something awesome.</p>
-      <div class="meta">Date: Nov 21 — Nov 23</div>
-    </div>
-  </article>
-</a>
-<a href="tech-talk.html" class="event-link">
-  <article class="event">
-    <img src="prom-ver.jpeg" alt="Event 1" />
-    <div class="event-body">
-      <h3>Promt Verse</h3>
-      <p>48-hour coding challenge. Team up and build something awesome.</p>
-      <div class="meta">Date: Nov 21 — Nov 23</div>
-    </div>
-  </article>
-</a>
-<a href="tech-talk.html" class="event-link">
-  <article class="event">
-    <img src="WebCraft_poster.png" alt="Event 1" />
-    <div class="event-body">
-      <h3>Web Craft</h3>
-      <p>48-hour coding challenge. Team up and build something awesome.</p>
-      <div class="meta">Date: Nov 21 — Nov 23</div>
-    </div>
-  </article>
-</a>
-<a href="tech-talk.html" class="event-link">
-  <article class="event">
-    <img src="trehun.jpeg" alt="Event 1" />
-    <div class="event-body">
-      <h3>Treasure Hunt</h3>
-      <p>48-hour coding challenge. Team up and build something awesome.</p>
-      <div class="meta">Date: Nov 21 — Nov 23</div>
-    </div>
-  </article>
-</a>
-<a href="tech-talk.html" class="event-link">
-  <article class="event">
-    <img src="charads.jpg" alt="Event 1" />
-    <div class="event-body">
-      <h3>Techcharads</h3>
-      <p>48-hour coding challenge. Team up and build something awesome.</p>
-      <div class="meta">Date: Nov 21 — Nov 23</div>
-    </div>
-  </article>
-</a>
+        <!-- TECHNICAL EVENTS -->
+        <h2>Technical Events</h2>
+        <div class="row g-4 mt-3">
+          <div class="col-md-4">
+            <article class="event h-100">
+              <img src="cirbug.jpeg" alt="Circuit Debugging" class="img-fluid event-img">
+              <div class="event-body">
+                <h3>Circuit Debugging</h3>
+                <p>Fix broken circuits in record time using logic and precision.</p>
+                <div class="meta">Date: Nov 21 — Nov 23</div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="event h-100">
+              <img src="meme2.jpeg" alt="Meme Creation" class="img-fluid event-img">
+              <div class="event-body">
+                <h3>Meme Creation</h3>
+                <p>Show your humor and tech creativity through memes.</p>
+                <div class="meta">Date: Nov 21 — Nov 23</div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="event h-100">
+              <img src="prom-ver.jpeg" alt="Prompt Verse" class="img-fluid event-img">
+              <div class="event-body">
+                <h3>Prompt Verse</h3>
+                <p>Express your creativity through coding prompts and poetry.</p>
+                <div class="meta">Date: Nov 21 — Nov 23</div>
+              </div>
+            </article>
+          </div>
+        </div>
 
+        <div class="row g-4 mt-3">
+          <div class="col-md-4">
+            <article class="event h-100">
+              <img src="WebCraft_poster.png" alt="Web Craft" class="img-fluid event-img">
+              <div class="event-body">
+                <h3>Web Craft</h3>
+                <p>Design and build innovative web experiences.</p>
+                <div class="meta">Date: Nov 21 — Nov 23</div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- NON-TECHNICAL EVENTS -->
+        <h2 class="mt-5">Non-Technical Events</h2>
+        <div class="row g-4 mt-3">
+          <div class="col-md-4">
+            <article class="event h-100">
+              <img src="techtalk.jpeg" alt="Tech Talk" class="img-fluid event-img">
+              <div class="event-body">
+                <h3>Tech-Talk</h3>
+                <p>Engage with innovators in inspiring discussions.</p>
+                <div class="meta">Date: Nov 21 — Nov 23</div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="event h-100">
+              <img src="trehun.jpeg" alt="Treasure Hunt" class="img-fluid event-img">
+              <div class="event-body">
+                <h3>Treasure Hunt</h3>
+                <p>Find hidden clues and win through teamwork and logic.</p>
+                <div class="meta">Date: Nov 21 — Nov 23</div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="event h-100">
+              <img src="charads.jpg" alt="Techcharads" class="img-fluid event-img">
+              <div class="event-body">
+                <h3>Techcharads</h3>
+                <p>Guess technical terms through gestures and fun.</p>
+                <div class="meta">Date: Nov 21 — Nov 23</div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="event h-100">
+              <img src="Cere-Quest-Poster2.png" alt="Techcharads" class="img-fluid event-img">
+              <div class="event-body">
+                <h3>Game of Tetrons</h3>
+                <p>Guess technical terms through gestures and fun.</p>
+                <div class="meta">Date: Nov 21 — Nov 23</div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    
-
-    
-
-          <aside class="contact-info">
-            <h3>Organizers</h3>
-            <p>Student Club, College Name</p>
-            <p>Email: <a href="mailto:example@college.edu">example@college.edu</a></p>
-            <p>Phone: +1 (555) 123-4567</p>
-            <h4>Venue</h4>
-            <p>Main Auditorium, College Campus</p>
-          </aside>
-        </div>
-      </div>
-    </section>
+    <!-- CONTACT -->
+    <aside class="contact-info">
+      <h3>Organizers</h3>
+      <p>Student Club, City Engineering College</p>
+      <p>Email: <a href="mailto:example@college.edu">example@college.edu</a></p>
+      <p>Phone: +1 (555) 123-4567</p>
+      <h4>Venue</h4>
+      <p>Main Auditorium, College Campus</p>
+    </aside>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>© <span id="year"></span> Nexus</div>
@@ -156,6 +168,8 @@
     </div>
   </footer>
 
+  <!-- ✅ Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
